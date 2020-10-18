@@ -12,6 +12,7 @@
 [providers.docker]
 
 [certificatesResolvers.base.acme]
-  [certificatesResolvers.base.acme.dnsChallenge]
-    provider = "cloudflare"
-    delayBeforeCheck = 0
+  email = "your-email@your-domain.org"
+  storage = "acme.json"
+  [certificatesResolvers.base.acme.httpChallenge]
+    entryPoint = "web"
