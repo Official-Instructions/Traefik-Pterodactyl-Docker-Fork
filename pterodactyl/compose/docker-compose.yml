@@ -1,7 +1,7 @@
 version: '3.7'
 
 networks:
-  pterodactyl:
+  proxy:
     external: true
   local:
     external: false
@@ -23,7 +23,7 @@ services:
     restart: always
     networks:
       - local
-      - pterodactyl
+      - proxy
     env_file:
       - .env
     depends_on:
@@ -74,7 +74,7 @@ services:
     restart: always
     networks:
       - local
-      - pterodactyl
+      - proxy
     working_dir: ${DATA_DIR_DAEMON}
     volumes:
       - ${DATA_DIR_DAEMON}:${DATA_DIR_DAEMON}
