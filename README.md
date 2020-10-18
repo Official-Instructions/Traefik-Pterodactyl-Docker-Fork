@@ -8,11 +8,10 @@
 There’s a lack of information about setting up and running Pterodactyl Panel inside docker using Traefik as reverse proxy. This guide focuses on the fastest and easiest way to do that! 
 
 # Getting Started
-We’ll be using docker, docker-compose and CloudFlare for DNS challenges to generate certificates. DNS challenges allow wildcard certificates allowing you to add any subdomains on the go. If you prefer using something else, have a look at [Traefik's Docs](https://docs.traefik.io/https/acme/).
+We’ll be using docker, docker-compose and http requests to generate certificates. DNS challenges allow wildcard certificates allowing you to add any subdomains on the go. If you prefer using DNS, have a look at [Traefik's Docs](https://docs.traefik.io/https/acme/).
 
 ### Requirements
 - Basic command line knowledge
-- A domain behind Cloudflare
 - [Docker](https://docs.docker.com/engine/install/ubuntu/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
@@ -44,8 +43,6 @@ Enter the compose directory and rename `.env.example` to `.env`. The most import
 | Variable | Example | Description |
 |-|:-:|-|
 | DOMAIN | example.com | Enter a domain that is behind CloudFlare |
-| CF_API_EMAIL | your@email.com | Your CloudFlare's account email |
-| CF_API_KEY | - | Go to your CloudFlare's profile and navigate to "API Tokens". Copy the "Global API Key" |
 | MYSQL_ROOT_PASSWORD | - | Use a password generator to create a strong password |
 | MYSQL_PASSWORD | - | Don't reuse your root's password for this, generate a new one |
 
