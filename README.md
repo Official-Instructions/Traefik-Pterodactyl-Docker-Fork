@@ -42,7 +42,7 @@ Enter the compose directory and rename `.env.example` to `.env`. The most import
 
 | Variable | Example | Description |
 |-|:-:|-|
-| DOMAIN | example.com | Enter a domain that is behind CloudFlare |
+| DOMAIN | example.com | Enter a domain |
 | MYSQL_ROOT_PASSWORD | - | Use a password generator to create a strong password |
 | MYSQL_PASSWORD | - | Don't reuse your root's password for this, generate a new one |
 
