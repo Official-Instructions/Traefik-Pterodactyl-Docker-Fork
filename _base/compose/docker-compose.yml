@@ -10,7 +10,7 @@ services:
     image: traefik:v2.3
     restart: always
     networks:
-      - pterodactyl
+      - proxy
     ports:
       - "80:80"
       - "443:443"
